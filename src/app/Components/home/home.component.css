@@ -1,0 +1,22 @@
+.cesta{
+    height: 90px;
+    margin-left: 25%; 
+    float: left;  
+  }
+  .card-body .card-title{
+    color: black;
+    text-align: center;
+    margin-top: 1%;  
+  }
+  
+  .card-title{
+    margin-right:50%;
+  }
+    
+  .card-textp{
+    margin-left: 36%;   
+  }
+  
+  .btn{
+    margin-left: 47%;
+  }

@@ -1,0 +1,19 @@
+.navbar-nav{
+    margin-left: 83%;   
+  }
+.fa-bell{
+    font-size: 30px;
+    width: 40px;
+    color: black;
+  }
+  
+  .fa-user{
+    font-size: 30px; 
+    width: 40px;
+    color: black;
+  }
+  .fa-cart-arrow-down{
+    font-size: 30px;
+    width: 50px;
+    color: black;
+  }

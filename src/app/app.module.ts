@@ -8,11 +8,14 @@ import { MenuComponent } from './Components/menu/menu.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { HomeComponent } from './Components/home/home.component';
 import { SignUpComponent } from './Components/sign-up/sign-up.component';
-import { from } from 'rxjs';
+import { FormConsumidorComponent } from './Components/form-consumidor/form-consumidor.component';
+import { FormTenderoComponent } from './Components/form-tendero/form-tendero.component';
 
 const routesApp: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'sign-up', component: SignUpComponent }
+  { path: 'sign-up', component: SignUpComponent },
+  { path: 'form-consumidor', component: FormConsumidorComponent },
+  { path: 'form-tendero', component: FormTenderoComponent }
 ]
 
 @NgModule({
@@ -21,7 +24,9 @@ const routesApp: Routes = [
     MenuComponent,
     FooterComponent,
     HomeComponent,
-    SignUpComponent
+    SignUpComponent,
+    FormConsumidorComponent,
+    FormTenderoComponent
   ],
   imports: [
     BrowserModule,

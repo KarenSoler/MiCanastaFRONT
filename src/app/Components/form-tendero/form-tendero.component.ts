@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { from } from 'rxjs';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 
 @Component({
@@ -19,7 +18,10 @@ export class FormTenderoComponent implements OnInit {
   }
   validator(){
     this.formtenderoForm = this.formBuilder.group({
+    city: ['',Validators.required],
+    locality: ['',Validators.required],
+    upz: ['',Validators.required],
+    neighborhood: ['',Validators.required]
     })
   }
-
 }

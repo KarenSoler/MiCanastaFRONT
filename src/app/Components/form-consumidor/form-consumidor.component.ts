@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validator, FormGroup } from '@angular/forms';
+import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-form-consumidor',
@@ -18,6 +18,9 @@ export class FormConsumidorComponent implements OnInit {
   }
   validator(){
     this.formconsumidorForm = this.formBuilder.group({
+    email: ['', Validators.required],
+    password: ['',Validators.required],
+    user: ['', Validators.required]
     })
   }
 

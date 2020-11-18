@@ -10,9 +10,11 @@ import { HomeComponent } from './Components/home/home.component';
 import { SignUpComponent } from './Components/sign-up/sign-up.component';
 import { from } from 'rxjs';
 
+
 const routesApp: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'sign-up', component: SignUpComponent }
+  { path: 'sign-up', component: SignUpComponent },
+ 
 ]
 
 @NgModule({
@@ -21,7 +23,8 @@ const routesApp: Routes = [
     MenuComponent,
     FooterComponent,
     HomeComponent,
-    SignUpComponent
+    SignUpComponent,
+  
   ],
   imports: [
     BrowserModule,

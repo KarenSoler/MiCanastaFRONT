@@ -13,6 +13,7 @@ import { FormTenderoComponent } from './Components/form-tendero/form-tendero.com
 import { IrtiendaComponent } from './Components/irtienda/irtienda.component';
 import { MapaComponent } from './Components/mapa/mapa.component';
 
+
 const routesApp: Routes = [
   { path: '', component: HomeComponent },
   { path: 'sign-up', component: SignUpComponent },
@@ -31,6 +32,7 @@ const routesApp: Routes = [
     FormTenderoComponent,
     IrtiendaComponent,
     MapaComponent
+
   ],
   imports: [
     BrowserModule,

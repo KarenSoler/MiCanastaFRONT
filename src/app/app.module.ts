@@ -8,7 +8,8 @@ import { MenuComponent } from './Components/menu/menu.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { HomeComponent } from './Components/home/home.component';
 import { SignUpComponent } from './Components/sign-up/sign-up.component';
-import { from } from 'rxjs';
+import { IrtiendaComponent } from './Components/irtienda/irtienda.component';
+import { MapaComponent } from './Components/mapa/mapa.component';
 
 const routesApp: Routes = [
   { path: '', component: HomeComponent },
@@ -21,7 +22,9 @@ const routesApp: Routes = [
     MenuComponent,
     FooterComponent,
     HomeComponent,
-    SignUpComponent
+    SignUpComponent,
+    IrtiendaComponent,
+    MapaComponent
   ],
   imports: [
     BrowserModule,

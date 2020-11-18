@@ -10,10 +10,16 @@ import { HomeComponent } from './Components/home/home.component';
 import { SignUpComponent } from './Components/sign-up/sign-up.component';
 import { IrtiendaComponent } from './Components/irtienda/irtienda.component';
 import { MapaComponent } from './Components/mapa/mapa.component';
+import { FormConsumidorComponent } from './Components/form-consumidor/form-consumidor.component';
+import { FormTenderoComponent } from './Components/form-tendero/form-tendero.component';
+import { IrtiendaComponent } from './Components/irtienda/irtienda.component';
+import { MapaComponent } from './Components/mapa/mapa.component';
 
 const routesApp: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'sign-up', component: SignUpComponent }
+  { path: 'sign-up', component: SignUpComponent },
+  { path: 'form-consumidor', component: FormConsumidorComponent },
+  { path: 'form-tendero', component: FormTenderoComponent }
 ]
 
 @NgModule({
@@ -23,6 +29,10 @@ const routesApp: Routes = [
     FooterComponent,
     HomeComponent,
     SignUpComponent,
+    IrtiendaComponent,
+    MapaComponent
+    FormConsumidorComponent,
+    FormTenderoComponent,
     IrtiendaComponent,
     MapaComponent
   ],

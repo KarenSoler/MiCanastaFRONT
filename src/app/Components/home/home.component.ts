@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators} from '@angular/forms';
-import { SugerenciaService} from '../../Services/sugerencia.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { SugerenciaService } from '../../Services/sugerencia.service';
 
 @Component({
   selector: 'app-home',
@@ -16,33 +16,33 @@ export class HomeComponent implements OnInit {
     private sugerenciaService: SugerenciaService
   ) {
     this.validator()
-   }
+  }
 
   ngOnInit(): void {
   }
 
-  validator(){
+  validator() {
     this.homeForm = this.formBuilder.group({
-      firstName: ['', Validators.required ],
-      email: ['', [ Validators.required, Validators.email] ],
+      firstName: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
       phone: ['', Validators.required],
       mensaje: ['', Validators.required]
     })
   }
 
-  saveSugerencia(){
-    console.log('campos del formulario',this.homeForm.value)
-    if (this.homeForm.valid){
-      this.sugerenciaService.createSugerencia( this.homeForm.value ).subscribe(
+  saveSugerencia() {
+    console.log('campos del formulario', this.homeForm.value)
+    if (this.homeForm.valid) {
+      this.sugerenciaService.createSugerencia(this.homeForm.value).subscribe(
         (sugerenciaCreated) => {
           console.log(sugerenciaCreated)
           alert('Sugerencia enviada correctamente')
         },
         (error) => {
-          //console.error('Tuvimos un error -> ', error)
+          console.error('Tuvimos un error -> ', error)
         }
       )
-    }else{
+    } else {
       alert('El Información no es valido')
     }
   }

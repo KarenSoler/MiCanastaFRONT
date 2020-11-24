@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { SignUpComponent } from './Components/sign-up/sign-up.component';
 import { IrtiendaComponent } from './Components/irtienda/irtienda.component';
 import { FormConsumidorComponent } from './Components/form-consumidor/form-consumidor.component';
 import { FormTenderoComponent } from './Components/form-tendero/form-tendero.component';
+
 
 const routesApp: Routes = [
   { path: '', component: HomeComponent },
@@ -28,6 +30,8 @@ const routesApp: Routes = [
     HomeComponent,
     SignUpComponent,
     IrtiendaComponent,
+    MapaComponent,
+ 
     FormConsumidorComponent,
     FormTenderoComponent
   ],

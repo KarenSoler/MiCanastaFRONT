@@ -6,5 +6,4 @@ export interface User{
     password: String;
     address: String;
     barrio: Array<String>;
-}
- 
+} 

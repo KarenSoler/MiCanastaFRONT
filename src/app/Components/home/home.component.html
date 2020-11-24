@@ -110,7 +110,7 @@
       </div>
     </div>
   </div>
-  
+
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
@@ -162,7 +162,7 @@
       </div>
     </div>
   </div>
-    
+
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
@@ -213,7 +213,7 @@
         <a href="./tienda1.html" class="btn btn-primary">Ir a la tienda</a>
       </div>
     </div>
-  </div> 
+  </div>
 
   <div class="col-sm-6">
     <div class="card">
@@ -227,7 +227,7 @@
       </div>
     </div>
   </div>
-  
+
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
@@ -280,11 +280,11 @@
       </div>
     </div>
   </div>
-  
+
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
-        <h5 class="card-title"><b>Tiendita de la esquina</b></h5>
+        <h5 class="card-title"><b class="title">Tiendita de la esquina</b></h5>
         <img src="assets/Images/promo2.jpg" class="cards-promo">
         <p class="card-text">Te ofrecemos la mejores promociones en
           verduras
@@ -321,19 +321,19 @@
     </div>
   </div>
 
-        
+
 </div>
 
 
 
 
-      <!-- FORMULARIO CONTACTO  -->
+<!-- FORMULARIO CONTACTO  
 
       <div class="contact_form">
         <div class="formulario">
           <h1>Déjanos tu sugerencia</h1>
           <h3>Escríbenos y en breve nos pondremos en contacto contigo.</h3>
-          <form action="submeter-formulario.php" method="post">
+          <form action="submeter-formulario.php" method="post" >
             <p>
               <label for="nombre" class="colocar_nombre">Nombre:
                 <span class="obligatorio">*</span>
@@ -375,3 +375,66 @@
 
         </div>
       </div>
+      
+-->
+<!--  NUEVO FORMULARIO -->
+
+<div class="contact-form">
+
+  <h1>Déjanos tu sugerencia</h1>
+  <h3>Escríbenos y en breve nos pondremos en contacto contigo.</h3>
+
+  <form [formGroup]="homeForm" (ngSubmit)="saveSugerencia()">
+
+    <div class="form-row">
+      <div class="form-group col-md-8">
+        <label>Nombres</label>
+        <input formControlName="firstName" id="firstName" type="text"
+          class="form-control">
+      </div>
+
+      <div class="form-group col-md-8">
+        <label>Correo</label>
+        <input formControlName="email" id="email" type="text"
+          class="form-control">
+        <p *ngIf="homeForm.get('email').errors?.email" class="error-message">
+          El correo electronico es incorrecto. </p>
+      </div>
+
+    </div>
+
+    <div class="form-row">
+      <div class="form-group col-md-8">
+        <label>Telefono</label>
+        <input formControlName="phone" id="phone" type="text"
+          class="form-control">
+      </div>
+
+      <div class="form-group col-md-8">
+        <label for="exampleFormControlTextarea1" class="texmensaje">Déjanos tu comentario</label>
+        <!--<input formControlName="mensaje" id="mensaje" type="text" class="form-control">-->
+        <textarea class="form-control" id="mensaje" formControlName="mensaje"></textarea>
+      </div>
+    </div>
+    <div>
+      <button class="btn btn-info" id="enviar"> Enviar  </button>
+    </div>
+
+  </form>
+</div>
+
+<!--COOKIES-->
+
+<div class="containerCookies">
+  <div class="alert alert-dark alert-dismissible fade show" role="alert">
+    <strong>Política con respecto a cookies:</strong> Utilizamos cookies
+    propias y de terceros para mejorar nuestros
+    servicios y mostrarle publicidad relacionada con sus preferencias
+    mediante el análisis de sus hábitos de navegación.
+    Si continúa navegando, consideramos que acepta su uso.
+    <button type="button" class="close" data-dismiss="alert"
+      aria-label="Close">
+      <span aria-hidden="true" class="cookies"> Aceptar</span>
+    </button>
+  </div>
+</div>

@@ -19,4 +19,142 @@
   
   .btn{
     margin-left: 47%;
+    background-color: #0a090a;
   }
+
+  /*  slider */
+#carouselExampleFade{
+  width: 60%;
+  margin-left: 20%;
+ }
+
+ /*STILOS cards PROMO*/
+ 
+.cards-promo{
+  width: 40%;
+  float: left;    
+}
+.card-text{
+  margin-left: 50%;
+}
+
+.row{
+  margin-top: 1%;
+}
+
+/*ESTILOS FORMULARIO_CONTACTO   */
+.contact-form{  
+  width: 900px; 
+  height: auto;
+  margin: 80px auto;
+  border-radius: 10px;  
+  border-width: 1px; 
+  border-color: d8ab17;
+  padding-top: 20px;
+  padding-bottom: 20px;    
+  background-color: black; 
+  padding-left: 30px; 
+  text-align: center;
+  color: #d8ab17;  
+  } 
+
+  
+  label {
+    margin-right: 34%;
+}
+label .texmensaje{
+  margin-left: 20%;
+}
+
+  #firstName{
+    margin-left: 25%;
+  }
+  #email{
+    margin-left: 25%;
+  }
+  #phone{
+    margin-left: 25%;
+  }
+  
+  textarea{
+  background-color: #fbfbfb; 
+  width: 580px; 
+  height: 150px; 
+  border-radius: 5px;  
+  border-style: solid; 
+  border-width: 1px; 
+  border-color: #d8ab17; 
+  margin-top: 10px;  
+  padding-left: 20px;
+  margin-bottom: 20px; 
+  padding-top: 15px; 
+  margin-left: 25%;
+  }
+  #enviar{
+    text-align:center;
+    margin-right: 44%;
+    display: inline-block;
+    font-weight: 900;
+    background-color: black;
+  }
+  
+  
+  h1{
+    font-size: 39px;  
+    text-align: center;
+    margin-top: 3%;
+    padding-bottom: 20px; 
+    color: #d8ab17;   
+  }
+  
+  h3{
+    font-size: 16px; 
+    padding-bottom: 30px;
+    color: #d8ab17; 
+    text-align: center;  
+  } 
+
+  .form-group input{
+    border-color: #d8ab17;   
+  } 
+
+  .error-message{
+    color: red;
+    font-weight: bold;
+}
+/* los cookies */
+
+.alert-dismissible .close{
+  margin-top: 2.5%;
+  margin-bottom: 2%; 
+  width: 15%;  
+  margin-right: 20%; 
+  padding: .60rem 1.25rem; 
+  height: 37px;
+  top: 15%;
+  ;  
+}
+
+span{
+  color: black;
+  background-color: transparent;
+  border: 0;
+}
+
+.alert-dismissible{
+  padding-top: 30px;
+  padding-top: 30px;
+  margin-bottom: 5%;
+}
+
+.button.close{
+  background-color: transparent;
+  border: 0;
+}
+
+
+.container h1{
+  font-family: 'Gayathri', sans-serif;
+}
+
+

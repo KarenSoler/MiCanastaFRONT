@@ -3,17 +3,16 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './Components/menu/menu.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { HomeComponent } from './Components/home/home.component';
 import { SignUpComponent } from './Components/sign-up/sign-up.component';
+import { IrtiendaComponent } from './Components/irtienda/irtienda.component';
 import { FormConsumidorComponent } from './Components/form-consumidor/form-consumidor.component';
 import { FormTenderoComponent } from './Components/form-tendero/form-tendero.component';
-import { IrtiendaComponent } from './Components/irtienda/irtienda.component';
-import { MapaComponent } from './Components/mapa/mapa.component';
-
 
 
 const routesApp: Routes = [
@@ -30,12 +29,11 @@ const routesApp: Routes = [
     FooterComponent,
     HomeComponent,
     SignUpComponent,
-    FormConsumidorComponent,
-    FormTenderoComponent,
     IrtiendaComponent,
     MapaComponent,
  
-
+    FormConsumidorComponent,
+    FormTenderoComponent
   ],
   imports: [
     BrowserModule,

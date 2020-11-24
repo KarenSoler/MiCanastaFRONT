@@ -1,49 +1,100 @@
+<head>
+  <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+    crossorigin="anonymous">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+    crossorigin="anonymous">
+</head>
+
 <div class="container">
+  <ul class="nav nav-tabs card-header-tabs">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/form-consumidor">Consumidor</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/form-tendero">Tendero</a>
+    </li>
+  </ul>
+</div>
 
-  <form >
-    <div class="form-row">
-      <div class="col-md-6 mb-3">
-        <i class="fas fa-envelope icon"></i>
-        <input type="text" class="form-control" placeholder="Correo">
-      </div>
-
-      <div class="col-md-6 mb-3">
-        <i class="fas fa-mobile icon"></i>
-        <input type="text" class="form-control" placeholder="Celular">
-      </div>
-
-      <div class="col-md-6 mb-3">
-        <i class="fas fa-user icon"></i>
-        <input type="text" class="form-control" placeholder="Nombre(s)">
-      </div>
-
-      <div class="col-md-6 mb-3">
-        <i class="fas fa-user icon"></i>
-        <input type="text" class="form-control" placeholder="Apellido(s)">
-      </div>
-
-      <div class="col-md-6 mb-3">
-        <i class="fas fa-lock icon"></i>
-        <input type="text" class="form-control" placeholder="Contraseña">
-      </div>
-
-      <div class="col-md-6 mb-3">
-        <i class="fas fa-lock icon"></i>
-        <input type="text" class="form-control" placeholder="Repetir
-          contraseña">
-      </div>
-
-      <div class="col-md-6 mb-3">
-        <input class="form-check-input" type="checkbox" value=""
-          id="disabledFieldsetCheck">
-        <label class="form-check-label" for="disabledFieldsetCheck">
-          Acepto los términos y condiciones.
-        </label>
-      </div>
-      <div class="col-md-6 mb-3">
-        <button type="submit" class="btn btn-dark btn-lg active">Registrarme</button>
+<div class="card border-warning mb-3 container" style="max-width: 800px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+      <a><img src="assets/Images/pareja.jpg" class="card-img"></a>
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title" style="color: black; text-align: center;
+          font-size: 36px;">¡Bienvenido!</h5>
+        <p class="card-text" style="text-align: center;">Regístrate en Mi
+          Canasta, compra y aprovecha grandes beneficios y descuentos.</p>
       </div>
     </div>
+  </div>
 
-  </form>
-</div>
+  <div class="container">
+
+    <form [formGroup]="formConsumidorForm" (ngSubmit)="saveUser()">
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <i class="fas fa-envelope icon"></i>
+          <input formControlName="email" id="email" type="text" class="form-control" placeholder="Correo">
+          <p *ngIf="formConsumidorForm.get('email').hasError('email')" class="error-message">El correo electrónico es incorrecto.</p>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <i class="fas fa-mobile icon"></i>
+          <input type="text" class="form-control" placeholder="Celular">
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <i class="fas fa-user icon"></i>
+          <input formControlName="name" id="name" type="text" class="form-control" placeholder="Nombre(s)">
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <i class="fas fa-user icon"></i>
+          <input formControlName="lastName" id="lastName" type="text" class="form-control" placeholder="Apellido(s)">
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <i class="fas fa-lock icon"></i>
+          <input formControlName="password" id="password" type="password" class="form-control" placeholder="Contraseña">
+          <p *ngIf="formConsumidorForm.get('password').errors?.minlength" class="error-message">La contraseña debe ser mayor a 6 caracteres</p>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <i class="fas fa-lock icon"></i>
+          <input type="password" class="form-control" placeholder="Repetir contraseña">
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <input class="form-check-input" type="checkbox" value=""
+            id="disabledFieldsetCheck">
+          <label class="form-check-label" for="disabledFieldsetCheck">
+            Acepto los términos y condiciones.
+            <a class="link"
+              href="https://docs.google.com/document/d/1E5L07LjdRESYR4hH2e01cc0C5uhHHeApUbRkkmrBrLM/edit?usp=sharing">Política
+              de privacidad
+            </a>
+          </label>
+        </div>
+        <div class="col-md-6 mb-3">
+          <button class="btn btn-dark btn-lg active">Registrarme</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous">
+</script>

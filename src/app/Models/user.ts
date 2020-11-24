@@ -8,5 +8,4 @@ export interface User{
     role: String;
     address: String;
     barrio: Array<String>;
-}
- 
+} 

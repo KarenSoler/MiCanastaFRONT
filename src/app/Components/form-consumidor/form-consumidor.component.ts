@@ -8,20 +8,34 @@ import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 })
 export class FormConsumidorComponent implements OnInit {
 
-  formconsumidorForm: FormGroup
+  formConsumidorForm: FormGroup
 
   constructor(
     private formBuilder: FormBuilder
-  ) { }
+  ) { 
+    this.validator()
+  }
 
   ngOnInit(): void {
   }
+  
   validator(){
-    this.formconsumidorForm = this.formBuilder.group({
-    email: ['', Validators.required],
-    password: ['',Validators.required],
-    user: ['', Validators.required]
+    this.formConsumidorForm = this.formBuilder.group({
+    email: ['', [Validators.required, Validators.email]],
+    phone: ['', Validators.required],
+    name: ['', Validators.required],
+    lastName: ['', Validators.required],
+    password: ['',[Validators.required, Validators.minLength(6)]],
+    repeatPassword: ['', Validators.required]
     })
   }
 
+  saveUser(){
+    if(this.formConsumidorForm.valid){
+      alert('Se va a guardar la información')
+    }
+    else{
+      alert('El formulario no es válido')
+    }
+  }
 }

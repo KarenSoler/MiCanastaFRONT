@@ -8,20 +8,39 @@ import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 })
 export class FormTenderoComponent implements OnInit {
 
-  formtenderoForm: FormGroup
+  formTenderoForm: FormGroup
 
   constructor(
     private formBuilder: FormBuilder
-  ) { }
+  ) { 
+    this.validator()
+  }
 
   ngOnInit(): void {
   }
   validator(){
-    this.formtenderoForm = this.formBuilder.group({
-    city: ['',Validators.required],
-    locality: ['',Validators.required],
-    upz: ['',Validators.required],
-    neighborhood: ['',Validators.required]
+    this.formTenderoForm = this.formBuilder.group({
+      business: ['', Validators.required],
+      nit: ['', Validators.required],
+      name: ['', Validators.required],
+      lastName: ['', Validators.required],
+      document: ['', Validators.required],
+      phone: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      city: ['', Validators.required],
+      address: ['', Validators.required],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+      repeatPassword: ['', Validators.required]
     })
   }
+
+  saveUser(){
+    if(this.formTenderoForm.valid){
+      alert('Se va a guardar la información')
+    }
+    else{
+      alert('El formulario no es válido')
+    }
+  }
+
 }

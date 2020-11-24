@@ -17,6 +17,9 @@ export class SignUpComponent implements OnInit {
     private userService: UserService
   ) { 
     this.validator()
+    private formBuilder: FormBuilder
+  ) {
+     this.validator()
   }
 
   ngOnInit(): void {
@@ -30,6 +33,12 @@ export class SignUpComponent implements OnInit {
       password: ['', [Validators.required, Validators.minLength(6)] ],
       role: ['User', Validators.required],
       Address:['', Validators.required],
+    firstName: ['', Validators.required],
+    lastName: ['', Validators.required],
+    phone: ['', Validators.required],
+    email: ['', Validators.required],
+    password:['', Validators.required],
+    address: ['', Validators.required],
     })
   }
 

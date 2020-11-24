@@ -8,6 +8,8 @@ import { MenuComponent } from './Components/menu/menu.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { HomeComponent } from './Components/home/home.component';
 import { SignUpComponent } from './Components/sign-up/sign-up.component';
+import { IrtiendaComponent } from './Components/irtienda/irtienda.component';
+import { MapaComponent } from './Components/mapa/mapa.component';
 import { FormConsumidorComponent } from './Components/form-consumidor/form-consumidor.component';
 import { FormTenderoComponent } from './Components/form-tendero/form-tendero.component';
 import { IrtiendaComponent } from './Components/irtienda/irtienda.component';
@@ -27,6 +29,8 @@ const routesApp: Routes = [
     FooterComponent,
     HomeComponent,
     SignUpComponent,
+    IrtiendaComponent,
+    MapaComponent
     FormConsumidorComponent,
     FormTenderoComponent,
     IrtiendaComponent,

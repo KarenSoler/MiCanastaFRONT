@@ -3,7 +3,7 @@
   <div class="formulario">
     <h1>Iniciar sesión</h1>
 
-    <form action="submeter-formulario.php" method="post">
+    <form [formGroup]="signUpForm" (ngSubmit)="saveUser()">
       <p>
         <label for="email" class="colocar_email"> CORREO
           <span class="obligatorio"></span>
@@ -25,9 +25,8 @@
       <button type="submit" name="enviar_formulario" id="enviar"><p>Ingresar</p></button>
       <p class="aviso">
         <span class="obligatorio"></span>Olvidé mi contraseña.
-        <hr>
       </p>
-      
+
       <div class="alert alert-secondary" role="alert">
         ¿No tienes una cuenta?/<a href="./FormRegistro.html"
           class="alert-link"> Registrarme ahora.</a>

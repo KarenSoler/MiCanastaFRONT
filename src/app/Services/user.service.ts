@@ -7,7 +7,7 @@ import { User } from '../Models/user';
 })
 export class UserService {
 
-  apiURL: String = 'https://micanasta.herokuapp.com';
+  apiURL: String = 'https://micanasta-app.herokuapp.com';
   constructor(
     private http: HttpClient
   ) { }

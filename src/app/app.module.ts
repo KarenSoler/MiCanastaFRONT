@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './Components/menu/menu.component';
@@ -12,6 +13,7 @@ import { FormConsumidorComponent } from './Components/form-consumidor/form-consu
 import { FormTenderoComponent } from './Components/form-tendero/form-tendero.component';
 import { IrtiendaComponent } from './Components/irtienda/irtienda.component';
 import { MapaComponent } from './Components/mapa/mapa.component';
+
 
 
 const routesApp: Routes = [
@@ -31,14 +33,16 @@ const routesApp: Routes = [
     FormConsumidorComponent,
     FormTenderoComponent,
     IrtiendaComponent,
-    MapaComponent
+    MapaComponent,
+ 
 
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routesApp),
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

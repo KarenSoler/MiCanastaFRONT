@@ -6,7 +6,7 @@ body{
   
   
   .contact_form{  
-    width: 460px; 
+    width: 450px; 
     height: auto;
     margin: 80px auto;
     border-radius: 10px;  
@@ -19,7 +19,7 @@ body{
   
   p input{
     background-color: #fbfbfb; 
-    width: 408px; 
+    width: 398px; 
     height: 40px; 
     border-radius: 5px;  
     border-style: solid; 
@@ -67,7 +67,7 @@ body{
       border-color: #0c0c0cef; 
       border-style: solid; 
       border-radius: 10px;    
-      width: 410px;   
+      width: 398px;   
      cursor: pointer;
      
   }
@@ -121,46 +121,4 @@ body{
       text-align: letf; 
       padding-bottom: 20px; 
       color: #fffdf5dc;
-  }
-   
-   /*  menu    */
-  .navbar-nav{
-    margin-left: 83%;   
-  }
-  
-  .fa-bell{
-    font-size: 30px;
-    width: 40px;
-    color: black;
-  }
-  
-  .fa-user{
-    font-size: 30px; 
-    width: 40px;
-    color: black;
-  }
-  .fa-cart-arrow-down{
-    font-size: 30px;
-    width: 50px;
-    color: black;
-  }
-  
-  /*a que me redirecciona al formulario de karen*/
-  
-  .alert{
-    background-color: transparent;
-    border: none;
-    margin-right: 0%;
-    color: white;
-  }
-  
-  .alert-secondary .alert-link{
-    color: #d8ab17ea;
-    text-decoration: none;
-  }
-  
-  .alert-secondary .alert-link:focus{
-    outline:0;
-      border: 1px solid #99e905ea;
-  
   }

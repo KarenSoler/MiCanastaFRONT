@@ -1,0 +1,57 @@
+h1{
+    text-align: center;
+    padding-top: 4%;
+}
+h3{
+    text-align: center;
+    padding-bottom: 4%;
+}
+.mapa button{  
+    background-color: chocolate;  
+    margin-left: 45%;
+    margin-bottom: 3%;
+    margin-top: 0;
+}
+
+
+/*STILOS CARDS LOCALIDADES*/
+ 
+.cards-locali{
+    width: 90%;
+    float: left;
+    margin-bottom: 2%;    
+  }
+  .card-text{
+    margin-left: 50%;
+  }
+  
+  .row{
+    margin-top: 1%;
+    
+  }
+
+  .card-uno{
+      margin-left: 5%;
+      border: 1px solid rgba(0,0,0,.125); 
+      margin-bottom: 5%;     
+  }
+
+  .card-dos{
+      margin-right: 4%;
+      margin-left: 4%;
+      border: 1px solid rgba(0,0,0,.125);
+      margin-bottom: 5%; 
+  }
+
+  .card-tres{
+      margin-right: 5%;
+      border: 1px solid rgba(0,0,0,.125);
+      margin-bottom: 5%; 
+  }
+
+  .btn-primary {
+    color: #fff;
+    background-color:black;
+    border-color:black;
+    margin-left: 30%;
+  }

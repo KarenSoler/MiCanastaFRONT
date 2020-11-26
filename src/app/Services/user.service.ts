@@ -17,6 +17,6 @@ export class UserService {
   }
 
   login(formData){
-    return this.http.post<User>(`${this.apiURL}/login`, formData)
+    return this.http.post<User>(`${this.apiURL}/login `, formData)
   }
 }

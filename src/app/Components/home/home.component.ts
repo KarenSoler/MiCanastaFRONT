@@ -43,7 +43,7 @@ export class HomeComponent implements OnInit {
         }
       )
     } else {
-      alert('El Información no es valido')
+      alert('La Información no es valida')
     }
   }
 

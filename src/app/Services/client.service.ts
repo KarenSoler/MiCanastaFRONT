@@ -18,4 +18,7 @@ export class ClientService {
   login(formData){
     return this.http.post<Cliente>(`${this.apiURL}/login`, formData)
   }
+  getOne(){
+    return this.http.get<Cliente>(`${this.apiURL}/cliente/getOne/5fb9d6fc72ceb554040ff797`)
+  }
 }

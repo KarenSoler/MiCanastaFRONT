@@ -19,4 +19,7 @@ export class TenderoService {
   login(formData){
     return this.http.post<Tendero>(`${this.apiURL}/login`, formData)
   }
+  getOne(){
+    return this.http.get<Tendero>(`${this.apiURL}/tendero/getOne/5f924196b43da426dc301af0`)
+  }
 }

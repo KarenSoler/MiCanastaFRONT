@@ -1,14 +1,9 @@
 <div class="row">
-  <div class="col-3">
-
-  </div>
-
   <div class="col-9">
     <input arial-label="Search" type="search" placeholder="Buscar"
       class="from-control" [(ngModel)]="search">
     <button (click)="fetchProduct(search)">buscar</button>
   </div>
-
 </div>
 <div class="col mb-4" *ngFor="let product of products">
   <div class="card" style="width: 18rem;">
@@ -28,7 +23,6 @@
         <li class="list-group-item"><b>Descuento Producto: </b>
           {{product.productDiscount}} </li>
       </ul>
-
     </div>
   </div>
 </div>
@@ -42,7 +36,6 @@
     <a routerLink="/localidades" class="btn btn-primary">Buscar</a>
   </div>
 </div>
-
 
 
 <!--Slider-->

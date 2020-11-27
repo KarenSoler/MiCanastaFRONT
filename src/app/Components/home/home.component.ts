@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { SugerenciaService } from '../../Services/sugerencia.service';
 import { ProductService} from '../../Services/product.service';
@@ -12,11 +12,11 @@ import { ActivatedRoute, Params } from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  @Input() product:Product
+  @Input() product: Product;
 
   homeForm: FormGroup;
-  products: Product[] = []; 
-  search='';
+  products: Product[] = [];
+  search = '';
 
   constructor(
     private formBuilder: FormBuilder,
@@ -28,8 +28,9 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.route.params.subscribe((params: Params) => { const productName = params.productName
-      this.fetchProduct(productName)
+    this.route.params.subscribe((params: Params) => { 
+      const productName = params.productName;
+      this.fetchProduct(productName);
     });
   }
 
@@ -59,12 +60,12 @@ export class HomeComponent implements OnInit {
     }
   }
 
-  fetchProduct(productName:string){    
+  fetchProduct(productName:string){
     this.productService.getProduct(productName)
     .subscribe (products => {
-      console.log(products)
-      this.products=products
-    })
+      console.log(products);
+      this.products = products;
+    });
   }
-
+  
 }

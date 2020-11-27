@@ -1,7 +1,46 @@
+/***************** Buscador *************/
+.from-control-search {
+  margin-left: 4%;    
+}
+
+.row-search{
+  margin-top: 0;
+}
+.buscador{
+  margin-left: 1%;
+  background-color: black;
+  cursor: pointer;
+  color: #fff;
+}
+.card-body .tarje{
+  margin-bottom: 2%;
+}
+
+/*******card del buscador******/
+
+.card-product{
+    margin-bottom: 11%; 
+    margin-top: 11%; 
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+/**********  cards tiendas pagina principal**********/
 .cesta{
     height: 90px;
     margin-left: 25%; 
     float: left;  
+  }
+  .card-body{
+    margin-top: 1PX solid #fff;
   }
   .card-body .card-title{
     color: black;

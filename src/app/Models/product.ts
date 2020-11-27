@@ -6,4 +6,5 @@ export interface Product{
     quantity: Number;
     price: Number;
     productDiscount: Number;
+    imagen: String;
 }

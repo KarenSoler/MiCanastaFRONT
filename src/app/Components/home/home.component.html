@@ -1,19 +1,15 @@
-<div class="row">
-  <div class="col-3">
-   
-  </div>
+<div class="row-search">  
 
   <div class="col-9">
     <input arial-label="Search" type="search" placeholder="Buscar"
-      class="from-control"  [(ngModel)]="search" >
-      <button  (click)="fetchProduct(search)">buscar</button>
+      class="from-control-search"  [(ngModel)]="search" >
+      <button  (click)="fetchProduct(search)" class="buscador">buscar</button>
   </div>
-
 </div>
-<div class="col mb-4" *ngFor="let product of products">
-  <div class="card" style="width: 18rem;">
-    <div class="card-body">
-        <h5 class="card-title">{{product.productName}}</h5>
+<div class="col-sm-4"  *ngFor="let product of products">
+  <div class="card-product" style="width: 22rem;">
+    <div class="card-body tarje">
+      <h5 class="card-title col-6">{{product.productName}}</h5>
         <ul class="list-group list-group-flush">
             <li class="list-group-item"><b>Marca: </b>
                 {{product.brandName}} </li>
@@ -28,10 +24,12 @@
             <li class="list-group-item"><b>Descuento Producto: </b>
                 {{product.productDiscount}} </li>
         </ul>
+        <img class="col-6" [src]="product.imagen" alt="">
   
     </div>
   </div>
 </div>
+
 
 <div class="card">
   <div class="card-body">
@@ -39,7 +37,7 @@
     <h3 class="card-title"><b>Mis Tiendas</b></h3>
     <p class="card-textp">Encuentra los mejores productos más cerca de ti y
       con un solo <b>Click</b></p>
-    <a routerLink="/localidades" class="btn btn-primary">Buscar</a>
+    <a routerLink="#" class="btn btn-primary">Buscar</a>
   </div>
 </div>
 
@@ -107,7 +105,7 @@
           hojaldrados por: <b>$2.000</b>. Visítanos para que conozcas
           más
           promociones.</p>
-        <a href="./tienda1.html" class="btn btn-primary">Ir a la tienda</a>
+        <a routerLink="/irtienda" class="btn btn-primary">Ir a la tienda</a>
       </div>
     </div>
   </div>
@@ -121,7 +119,7 @@
           verduras
           el día de hoy. 10 libras de papa pastusa, por: <b>$4.000</b>.
           Visítanos para que conozcas más promociones. </p>
-        <a href="./tienda2.html" class="btn btn-primary">Ir a la tienda</a>
+        <a routerLink="/irtienda" class="btn btn-primary">Ir a la tienda</a>
       </div>
     </div>
   </div>
@@ -136,7 +134,7 @@
           nevera a un precio <b>increíble</b>. Visítanos para que
           conozcas más
           promociones. </p>
-        <a href="./tienda3.html" class="btn btn-primary">Ir a la tienda</a>
+        <a routerLink="/irtienda" class="btn btn-primary">Ir a la tienda</a>
       </div>
     </div>
   </div>
@@ -150,7 +148,7 @@
           licores y al mejor<b> precio</b>. Visítanos para que conozcas
           más
           promociones. </p>
-        <a href="./tienda1.html" class="btn btn-primary">Ir a la tienda</a>
+        <a routerLink="/irtienda" class="btn btn-primary">Ir a la tienda</a>
       </div>
     </div>
   </div>
@@ -164,7 +162,7 @@
           hojaldrados por: <b>$2.000</b>. Visítanos para que conozcas
           más
           promociones.</p>
-        <a href="./tienda1.html" class="btn btn-primary">Ir a la tienda</a>
+        <a routerLink="/irtienda" class="btn btn-primary">Ir a la tienda</a>
       </div>
     </div>
   </div>
@@ -178,7 +176,7 @@
           verduras
           el día de hoy. 10 libras de papa pastusa, por: <b>$4.000</b>.
           Visítanos para que conozcas más promociones. </p>
-        <a href="./tienda2.html" class="btn btn-primary">Ir a la tienda</a>
+        <a routerLink="/irtienda" class="btn btn-primary">Ir a la tienda</a>
       </div>
     </div>
   </div>
@@ -193,7 +191,7 @@
           nevera a un precio <b>increíble</b>. Visítanos para que
           conozcas más
           promociones. </p>
-        <a href="./tienda3.html" class="btn btn-primary">Ir a la tienda</a>
+        <a routerLink="/irtienda" class="btn btn-primary">Ir a la tienda</a>
       </div>
     </div>
   </div>
@@ -207,7 +205,7 @@
           licores y al mejor<b> precio</b>. Visítanos para que conozcas
           más
           promociones. </p>
-        <a href="./tienda1.html" class="btn btn-primary">Ir a la tienda</a>
+        <a routerLink="/irtienda" class="btn btn-primary">Ir a la tienda</a>
       </div>
     </div>
   </div>
@@ -221,7 +219,7 @@
           hojaldrados por: <b>$2.000</b>. Visítanos para que conozcas
           más
           promociones.</p>
-        <a href="./tienda1.html" class="btn btn-primary">Ir a la tienda</a>
+        <a routerLink="/irtienda" class="btn btn-primary">Ir a la tienda</a>
       </div>
     </div>
   </div>
@@ -235,7 +233,7 @@
           verduras
           el día de hoy. 10 libras de papa pastusa, por: <b>$4.000</b>.
           Visítanos para que conozcas más promociones. </p>
-        <a href="./tienda2.html" class="btn btn-primary">Ir a la tienda</a>
+        <a routerLink="/irtienda" class="btn btn-primary">Ir a la tienda</a>
       </div>
     </div>
   </div>
@@ -250,7 +248,7 @@
           nevera a un precio <b>increíble</b>. Visítanos para que
           conozcas más
           promociones. </p>
-        <a href="./tienda3.html" class="btn btn-primary">Ir a la tienda</a>
+        <a routerLink="/irtienda" class="btn btn-primary">Ir a la tienda</a>
       </div>
     </div>
   </div>
@@ -264,7 +262,7 @@
           licores y al mejor<b> precio</b>. Visítanos para que conozcas
           más
           promociones. </p>
-        <a href="./tienda1.html" class="btn btn-primary">Ir a la tienda</a>
+        <a routerLink="/irtienda" class="btn btn-primary">Ir a la tienda</a>
       </div>
     </div>
   </div>
@@ -278,7 +276,7 @@
           hojaldrados por: <b>$2.000</b>. Visítanos para que conozcas
           más
           promociones.</p>
-        <a href="./tienda1.html" class="btn btn-primary">Ir a la tienda</a>
+        <a routerLink="/irtienda" class="btn btn-primary">Ir a la tienda</a>
       </div>
     </div>
   </div>
@@ -292,7 +290,7 @@
           verduras
           el día de hoy. 10 libras de papa pastusa, por: <b>$4.000</b>.
           Visítanos para que conozcas más promociones. </p>
-        <a href="./tienda2.html" class="btn btn-primary">Ir a la tienda</a>
+        <a routerLink="/irtienda" class="btn btn-primary">Ir a la tienda</a>
       </div>
     </div>
   </div>
@@ -307,7 +305,7 @@
           nevera a un precio <b>increíble</b>. Visítanos para que
           conozcas más
           promociones. </p>
-        <a href="./tienda3.html" class="btn btn-primary">Ir a la tienda</a>
+        <a routerLink="/irtienda" class="btn btn-primary">Ir a la tienda</a>
       </div>
     </div>
   </div>
@@ -320,7 +318,7 @@
         <p class="card-text">Celebra tus mejores fiestas con los mejores
           licores y al mejor<b> precio</b>. Visítanos para que conozcas
           más promociones. </p>
-        <a href="./tienda1.html" class="btn btn-primary">Ir a la tienda</a>
+        <a routerLink="/irtienda" class="btn btn-primary">Ir a la tienda</a>
       </div>
     </div>
   </div>
@@ -334,7 +332,7 @@
           hojaldrados por: <b>$2.000</b>. Visítanos para que conozcas
           más
           promociones.</p>
-        <a href="./tienda1.html" class="btn btn-primary">Ir a la tienda</a>
+        <a routerLink="/irtienda" class="btn btn-primary">Ir a la tienda</a>
       </div>
     </div>
   </div>
@@ -348,7 +346,7 @@
           verduras
           el día de hoy. 10 libras de papa pastusa, por: <b>$4.000</b>.
           Visítanos para que conozcas más promociones. </p>
-        <a href="./tienda2.html" class="btn btn-primary">Ir a la tienda</a>
+        <a routerLink="/irtienda" class="btn btn-primary">Ir a la tienda</a>
       </div>
     </div>
   </div>
@@ -363,7 +361,7 @@
           nevera a un precio <b>increíble</b>. Visítanos para que
           conozcas más
           promociones. </p>
-        <a href="./tienda3.html" class="btn btn-primary">Ir a la tienda</a>
+        <a routerLink="/irtienda" class="btn btn-primary">Ir a la tienda</a>
       </div>
     </div>
   </div>
@@ -376,7 +374,7 @@
         <p class="card-text">Celebra tus mejores fiestas con los mejores
           licores y al mejor<b> precio</b>. Visítanos para que conozcas
           más promociones. </p>
-        <a href="./tienda1.html" class="btn btn-primary">Ir a la tienda</a>
+        <a routerLink="/irtienda" class="btn btn-primary">Ir a la tienda</a>
       </div>
     </div>
   </div>

@@ -1,7 +1,7 @@
 .navbar-nav{
     margin-left: 83%;   
   }
-.fa-bell{
+.fa-home{
     font-size: 30px;
     width: 40px;
     color: black;
@@ -12,7 +12,7 @@
     width: 40px;
     color: black;
   }
-  .fa-cart-arrow-down{
+  .fa-map-marked-alt{
     font-size: 30px;
     width: 50px;
     color: black;

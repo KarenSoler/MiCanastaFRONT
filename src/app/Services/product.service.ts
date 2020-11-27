@@ -7,7 +7,7 @@ import { Product} from '../Models/product';
 })
 export class ProductService {
 
-  apiURL: String = 'https://micanasta-app.herokuapp.com';
+  apiURL: String = '//localhost:3000';
 
   constructor(
     private http: HttpClient

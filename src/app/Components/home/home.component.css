@@ -8,6 +8,9 @@
     text-align: center;
     margin-top: 1%;  
   }
+  #buscar{
+    margin-right: 45%;
+  }
   
   .card-title{
     margin-right:50%;
@@ -18,8 +21,38 @@
   }
   
   .btn{
-    margin-left: 47%;
+    margin-left: 60%;
     background-color: #0a090a;
+  }
+
+  .card-uno{
+    margin-left: 6%;
+    margin-bottom: 5%;
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+  }
+  .card-dos{
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+    margin-right: 3%;
   }
 
   /*  slider */
@@ -37,166 +70,123 @@
 .card-text{
   margin-left: 50%;
 }
+
 .row{
   margin-top: 1%;
 }
 
-/*ESTILOS FORMULARIO_CONTACTO  JENIFER*/
-.contact_form{  
-  width: 560px; 
+/*ESTILOS FORMULARIO_CONTACTO   */
+.contact-form{  
+  width: 900px; 
   height: auto;
   margin: 80px auto;
   border-radius: 10px;  
-  padding-top: 30px;
-  padding-bottom: 20px;  
-  background-color: #d8ab17; 
+  border-width: 1px; 
+  border-color: d8ab17;
+  padding-top: 20px;
+  padding-bottom: 20px;    
+  background-color: black; 
   padding-left: 30px; 
-  }
-  #nombre{
-    background-color: #fbfbfb; 
-    width: 418px; 
-    height: 40px; 
-    border-radius: 5px;  
-    border-style: solid; 
-    border-width: 1px; 
-    border-color: #181718; 
-    margin-top: 10px;  
-    padding-left: 20px;
-    margin-bottom: 20px; 
-    margin-left: 7%;
+  text-align: center;
+  color: #d8ab17;  
+  } 
+  
+  label {
+    margin-right: 34%;
+}
+.texmensaje{
+  margin-left: 18%;
+}
+
+  #firstName{
+    margin-left: 25%;
   }
   #email{
-    background-color:#fbfbfb; 
-    width: 418px; 
-    height: 40px; 
-    border-radius: 5px;  
-    border-style: solid; 
-    border-width: 1px; 
-    border-color: #181718; 
-    margin-top: 10px;  
-    padding-left: 20px;
-    margin-bottom: 20px;
-    margin-left: 7%;
+    margin-left: 25%;
   }
-  #telefono{
-    background-color:#fbfbfb; 
-    width: 418px; 
-    height: 40px; 
-    border-radius: 5px;  
-    border-style: solid; 
-    border-width: 1px; 
-    border-color: #181718; 
-    margin-top: 10px;  
-    padding-left: 20px;
-    margin-bottom: 20px;
-    margin-left: 7%;
+  #phone{
+    margin-left: 25%;
   }
-  #assunto{
-    background-color: #fbfbfb; 
-    width: 418px; 
-    height: 40px; 
-    border-radius: 5px;  
-    border-style: solid; 
-    border-width: 1px; 
-    border-color: #181718; 
-    margin-top: 10px;  
-    padding-left: 20px;
-    margin-bottom: 20px;
-    margin-left: 7%;
-  }
+  
   textarea{
   background-color: #fbfbfb; 
-  width: 435px; 
+  width: 580px; 
   height: 150px; 
   border-radius: 5px;  
   border-style: solid; 
   border-width: 1px; 
-  border-color: #ab4493; 
+  border-color: #d8ab17; 
   margin-top: 10px;  
   padding-left: 20px;
   margin-bottom: 20px; 
   padding-top: 15px; 
-  margin-left: 7%;
+  margin-left: 25%;
   }
-  
-  label{
-  display: block; 
-  float: center; 
-  margin-left: 7%; 
-  color: black;
-  font-family: 'Noto Sans', sans-serif;
-  }
-  
-  button{
-  height: 45px; 
-  padding-left: 5px;
-  padding-right: 5px;     
-  margin-bottom: 20px; 
-  margin-top: 10px;   
-  text-transform: uppercase;
-  background-color: #0a090a; 
-  border-color: #8f8e8f; 
-  border-style: solid; 
-  border-radius: 10px;    
-  width: 420px;   
-  cursor: pointer;
-  margin-left: 7%;
-  }
-  
-  #enviar p{
+  #enviar{
     text-align:center;
+    margin-right: 44%;
+    display: inline-block;
+    font-weight: 900;
+    background-color: black;
   }
   
-  button p{
-    color: #fff; 
-  }
-  
-  
-  span{
-    color: #111011; 
-  }
-  
-  .aviso{
-    font-size: 13px;  
-    color: #0e0e0e;  
-  }
   
   h1{
     font-size: 39px;  
     text-align: center;
+    margin-top: 3%;
     padding-bottom: 20px; 
-    color: #111011;
-    text-align: center;
+    color: #d8ab17;   
   }
   
   h3{
     font-size: 16px; 
     padding-bottom: 30px;
-    color: #0e0e0e; 
+    color: #d8ab17; 
     text-align: center;  
-  }
-  
-  p{
-    font-size: 14px; 
-    color: #0e0e0e; 
-  }
-  
-  
-  ::-webkit-input-placeholder {
-  color: #a8a8a8;
-  }
-  
-  ::-webkit-textarea-placeholder {
-  color: #a8a8a8;
-  }
-  
-  .formulario input:focus{
-    outline:0;
-    border: 1px solid #97d848;
-  }
-  
-  .formulario textarea:focus{
-    outline:0;
-    border: 1px solid #97d848;
-  }
-  
+  } 
+
+  .form-group input{
+    border-color: #d8ab17;   
+  } 
+
+  .error-message{
+    color: red;
+    font-weight: bold;
+}
+/* los cookies */
+
+.alert-dismissible .close{
+  margin-top: 2.5%;
+  margin-bottom: 2%; 
+  width: 15%;  
+  margin-right: 20%; 
+  padding: .60rem 1.25rem; 
+  height: 37px;
+  top: 15%;
+  ;  
+}
+
+span{
+  color: black;
+  background-color: transparent;
+  border: 0;
+}
+
+.alert-dismissible{
+  padding-top: 30px;
+  padding-top: 30px;
+  margin-bottom: 5%;
+}
+
+.button.close{
+  background-color: transparent;
+  border: 0;
+}
+
+
+.container h1{
+  font-family: 'Gayathri', sans-serif;
+}
+
+

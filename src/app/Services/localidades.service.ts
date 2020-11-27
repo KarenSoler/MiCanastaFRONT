@@ -1,22 +1,20 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { User } from '../Models/user';
+import {} from '../Models/localidades';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UserService {
+export class LocalidadesService {
 
   apiURL: String = 'https://micanasta-app.herokuapp.com';
+
   constructor(
     private http: HttpClient
   ) { }
 
-  createUser(formData){
-    return this.http.post<User>(`${this.apiURL}/user/create`, formData)
+  getAll(){
+    return this.http.get(`${this.apiURL}/localides/getAll`)
   }
 
-  login(formData){
-    return this.http.post<User>(`${this.apiURL}/login `, formData)
-  }
 }

@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './Components/menu/menu.component';
@@ -13,23 +13,18 @@ import { IrtiendaComponent } from './Components/irtienda/irtienda.component';
 import { FormConsumidorComponent } from './Components/form-consumidor/form-consumidor.component';
 import { FormTenderoComponent } from './Components/form-tendero/form-tendero.component';
 import { LocalidadesComponent } from './components/localidades/localidades.component';
-import { ListarlocalidadesComponent } from './components/listarlocalidades/listarlocalidades.component';
+import { LoginComponent } from './Components/login/login.component';
+import { ProductComponent } from './components/product/product.component';
+import { AuthGuard } from './Guards/auth.guard';
 
 const routesApp: Routes = [
   { path: '', component: HomeComponent },  
   { path: 'form-consumidor', component: FormConsumidorComponent },
   { path: 'form-tendero', component: FormTenderoComponent },
-  { path: 'localidades', component: LocalidadesComponent },
-  { path: 'liatarlocalidades', component: ListarlocalidadesComponent }
-
-import { LoginComponent } from './Components/login/login.component';
-
-
-const routesApp: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'form-consumidor', component: FormConsumidorComponent },
-  { path: 'form-tendero', component: FormTenderoComponent },
-  { path: 'login', component: LoginComponent}
+  { path: 'localidades', component: LocalidadesComponent },  
+  { path: 'login', component: LoginComponent},
+  { path: 'product', component: ProductComponent }
+  
 ]
 
 @NgModule({
@@ -41,9 +36,9 @@ const routesApp: Routes = [
     IrtiendaComponent,
     FormConsumidorComponent,
     FormTenderoComponent,
-    LocalidadesComponent,    
-    ListarlocalidadesComponent,
-    LoginComponent
+    LocalidadesComponent,     
+    LoginComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

@@ -41,7 +41,7 @@
 
   <div class="container">
 
-    <form [formGroup]="formConsumidorForm" (ngSubmit)="saveUser()">
+    <form [formGroup]="formConsumidorForm" (ngSubmit)="saveConsumidor()">
       <div class="form-row">
         <div class="col-md-6 mb-3">
           <i class="fas fa-envelope icon"></i>
@@ -51,7 +51,7 @@
 
         <div class="col-md-6 mb-3">
           <i class="fas fa-mobile icon"></i>
-          <input type="text" class="form-control" placeholder="Celular">
+          <input formControlName="phone" id="phone" type="text" class="form-control" placeholder="Celular">
         </div>
 
         <div class="col-md-6 mb-3">
@@ -72,7 +72,8 @@
 
         <div class="col-md-6 mb-3">
           <i class="fas fa-lock icon"></i>
-          <input type="password" class="form-control" placeholder="Repetir contraseña">
+          <input formControlName="repeatPassword" id="repeatPassword" type="password" class="form-control" placeholder="Repetir contraseña">
+          <p *ngIf="formConsumidorForm.get('password').errors?.minlength" class="error-message">La contraseña debe ser mayor a 6 caracteres</p>
         </div>
 
         <div class="col-md-6 mb-3">

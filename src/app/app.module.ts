@@ -11,6 +11,7 @@ import { SignUpComponent } from './Components/sign-up/sign-up.component';
 import { IrtiendaComponent } from './Components/irtienda/irtienda.component';
 import { FormConsumidorComponent } from './Components/form-consumidor/form-consumidor.component';
 import { FormTenderoComponent } from './Components/form-tendero/form-tendero.component';
+import { HttpClientModule } from '@angular/common/http';
 
 const routesApp: Routes = [
   { path: '', component: HomeComponent },
@@ -34,7 +35,8 @@ const routesApp: Routes = [
     BrowserModule,
     RouterModule.forRoot(routesApp),
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,3 @@
-import { SrvRecord } from 'dns';
-
 export interface Tendero{
     id: String;
     business: String;
@@ -11,6 +9,8 @@ export interface Tendero{
     email: String;
     city: String;
     address: String;
+    locality: String;
+    neighborhood: String;
     password: String;
     repeatPassword: String;
 }

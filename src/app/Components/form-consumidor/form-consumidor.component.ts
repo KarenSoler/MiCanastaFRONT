@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 
+import {ClientService} from '../../Services/client.service'
+
 @Component({
   selector: 'app-form-consumidor',
   templateUrl: './form-consumidor.component.html',
@@ -11,7 +13,8 @@ export class FormConsumidorComponent implements OnInit {
   formConsumidorForm: FormGroup
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private clientService: ClientService
   ) { 
     this.validator()
   }
@@ -30,11 +33,18 @@ export class FormConsumidorComponent implements OnInit {
     })
   }
 
-  saveUser(){
+  saveConsumidor(){
     if(this.formConsumidorForm.valid){
-      alert('Se va a guardar la información')
-    }
-    else{
+      this.clientService.createConsumidor(this.formConsumidorForm.value).subscribe(
+        (consumidorCreated) => {
+          console.log(consumidorCreated)
+          alert('Usuario creado correctamente.')
+        },
+        (error) => {
+          console.error('Tuvimos un errror.', error)
+        }
+      )
+    }else{
       alert('El formulario no es válido')
     }
   }

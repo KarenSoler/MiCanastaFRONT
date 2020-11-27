@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 
+import { TenderoService } from '../../Services/tendero.service'
+
 @Component({
   selector: 'app-form-tendero',
   templateUrl: './form-tendero.component.html',
@@ -11,7 +13,8 @@ export class FormTenderoComponent implements OnInit {
   formTenderoForm: FormGroup
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private tenderoService: TenderoService
   ) { 
     this.validator()
   }
@@ -29,16 +32,25 @@ export class FormTenderoComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       city: ['', Validators.required],
       address: ['', Validators.required],
+      locality: ['', Validators.required],
+      neighborhood: ['', Validators.required],
       password: ['', [Validators.required, Validators.minLength(6)]],
       repeatPassword: ['', Validators.required]
     })
   }
 
-  saveUser(){
+  saveTendero(){
     if(this.formTenderoForm.valid){
-      alert('Se va a guardar la información')
-    }
-    else{
+      this.tenderoService.createTendero( this.formTenderoForm.value).subscribe(
+        (tenderoCreated) => {
+          console.log(tenderoCreated)
+          alert('Tendero creado correctamente.')
+        },
+        (error) => {
+          console.error('Tuvimos un error.', error)
+        }
+      )
+    }else{
       alert('El formulario no es válido')
     }
   }

@@ -1,5 +1,4 @@
 export interface Cliente {
-    id: String;
     email: String;
     phone: String;
     name: String;

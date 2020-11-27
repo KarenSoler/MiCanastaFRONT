@@ -16,6 +16,7 @@ import { LocalidadesComponent } from './components/localidades/localidades.compo
 import { LoginComponent } from './Components/login/login.component';
 import { ProductComponent } from './components/product/product.component';
 import { TenderoComponent } from './Components/tendero/tendero.component';
+import { PedidoComponent } from './Components/cliente/cliente.component';
 
 const routesApp: Routes = [
   { path: '', component: HomeComponent },  
@@ -24,7 +25,8 @@ const routesApp: Routes = [
   { path: 'localidades', component: LocalidadesComponent },  
   { path: 'login', component: LoginComponent},
   { path: 'product', component: ProductComponent },
-  { path: 'tendero', component: TenderoComponent}
+  { path: 'tendero', component: TenderoComponent},
+  { path: 'cliente', component: PedidoComponent}
 ]
 
 @NgModule({
@@ -32,14 +34,15 @@ const routesApp: Routes = [
     AppComponent,
     MenuComponent,
     FooterComponent,
-    HomeComponent,    
+    HomeComponent,
     IrtiendaComponent,
     FormConsumidorComponent,
     FormTenderoComponent,
-    LocalidadesComponent,     
+    LocalidadesComponent,
     LoginComponent,
     ProductComponent,
-    TenderoComponent
+    TenderoComponent,
+    PedidoComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,6 @@ const routesApp: Routes = [
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
-    
   ],
   providers: [],
   bootstrap: [AppComponent]

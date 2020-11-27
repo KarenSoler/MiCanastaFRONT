@@ -1,0 +1,49 @@
+    <h2>PEDIDOS MI CANASTA</h2>
+
+    <div class="card mb-3 tarjet" style="max-width: 620px;">
+        <div class="row no-gutters">
+            <div class="col-md-4">
+                <img src="https://previews.123rf.com/images/thesomeday123/thesomeday1231712/thesomeday123171200008/91087328-default-avatar-profile-icon-for-female-grey-photo-placeholder-illustrations-vector.jpg" class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h1 class="card-title">
+                        <p>Usuario</p>
+                    </h1>
+                    <div class="container_client">
+                        <p class="card-text item1">Nombre:</p><p class="card-text item2" id="name_client">{{cliente.name}} {{cliente.lastName}}</p>
+                        <p class="card-text item5">Numero de contacto:</p><p class="card-text item6" id="upz_client">{{cliente.phone}}</p>
+                        <p class="card-text item7">Correo Electronico:</p><p class="card-text item8" id="location_client">{{cliente.email}}</p>
+                    </div>
+                    <p class="card-text item11"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contrainer">
+      <h1 class="card-title">Agregar Pedido</h1>
+      <div class="list-group">
+        <label for="">Nombre Producto</label>
+        <input type=text [(ngModel)]="nProduct">
+        <label for="">Precio Procuto</label>
+        <input type=text [(ngModel)]="pProduct">
+        <label for="">Cantidad</label>
+        <input type=text [(ngModel)]="qProduct">
+        <label for="">Imagen</label>
+        <input type=text [(ngModel)]="iProduct">
+        <button routerLink="/cliente" type="button" (click)="createProduct(cliente._id)" class="list-group-item list-group-item-action">Cargar Productos</button>
+      </div>
+    </div>
+    
+
+    <div class="container">
+        <h1> Tus Pedidos</h1>
+        <section class="main-charecters">
+            <div *ngFor="let pedido of pedidos" class="charecters">
+              <div><h3>{{pedido.nameProduct}}</h3></div>
+              <img [src]="pedido.image" alt=`{{pedido.nameProduct}}` width="250" height="200">
+              <P>{{pedido.quantityProduct}}</P>
+              <a  type="button" (click)="deleteProduct(pedido._id)" class="list-group-item list-group-item-action">Borrar Producto</a>
+            </div>
+        </section>
+    </div>

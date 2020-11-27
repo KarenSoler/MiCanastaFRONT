@@ -8,7 +8,7 @@ import { Surtido } from '../Models/surtido'
 })
 export class SurtidoService {
 
-    apiURL: String = '//localhost:3000';
+    apiURL: String = 'https://micanasta-app.herokuapp.com';
     constructor(
       private http: HttpClient
     ) { }
